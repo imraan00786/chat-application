@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { registerUser } from '../../features/auth/authSlice'; // Replace with your actual authSlice method
+import { registerUser } from '../../features/auth/authSlice'; 
 import { useNavigate, Link } from 'react-router-dom';
-import  Loader from '../Shared/Loader'; // Optional loader component for displaying loading state
+import  Loader from '../Shared/Loader'; 
 import { useAppDispatch } from '../../app/store';
 
 
-// Form field validation utility (for simplicity)
+
 const validateForm = (email: string, password: string, confirmPassword: string) => {
   if (!email || !password || !confirmPassword) {
     return 'All fields are required';
@@ -38,8 +38,7 @@ const RegisterForm: React.FC = () => {
     setIsSubmitting(true);
     try {
         await dispatch(registerUser({ email, password }));
-        // Dispatch registerUser action (to be created in authSlice)
-      navigate('/login'); // Redirect to login page after successful registration
+      navigate('/login'); 
     } catch (err) {
       setError('Registration failed. Please try again.');
     } finally {

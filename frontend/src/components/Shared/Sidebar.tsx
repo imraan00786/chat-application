@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaHome, FaUsers, FaCog } from 'react-icons/fa';
-import SidebarLink from './SidebarLink'; // or correct relative path
-
+import SidebarLink from './SidebarLink'; 
 interface SidebarProps {
   isOpen: boolean;
   onToggle: () => void;

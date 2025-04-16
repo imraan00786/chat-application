@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { logout } from '../../features/auth/authSlice'; // Assuming you have a logout action in your authSlice
-import { RootState } from '../../app/store'; // Assuming this is where you store global state
+import { logout } from '../../features/auth/authSlice'; 
+import { RootState } from '../../app/store'; 
 import { useAppDispatch, useAppSelector } from '../../app/store';
 
 const Header = () => {
@@ -9,7 +9,7 @@ const Header = () => {
   const { user } = useAppSelector((state: RootState) => state.auth);
 
   const handleLogout = () => {
-    dispatch(logout()); // Dispatching logout action (you need to define this action in authSlice)
+    dispatch(logout()); 
   };
 
   return (

@@ -10,7 +10,7 @@ const axiosInstance = axios.create({
 // Interceptor to attach token
 axiosInstance.interceptors.request.use(
     (config) => {
-      const token = localStorage.getItem('token'); // or use Redux selector if you prefer
+      const token = localStorage.getItem('token'); 
       console.log(token)
       if (token) {
         config.headers.Authorization = `Bearer ${token}`;

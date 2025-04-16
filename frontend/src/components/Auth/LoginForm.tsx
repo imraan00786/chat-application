@@ -25,11 +25,6 @@ const LoginForm: React.FC = () => {
         localStorage.setItem('token', resultAction.payload.token);
         navigate('/chat'); // Navigate to chat on success
     }
-
-    // console.log("Attempting login...");
-    // await dispatch(loginUser({ email, password })); // unwrap to catch errors explicitly
-    // console.log("Login successful, navigating to chat...");
-    // navigate('/chat');
   };
 
   return (
